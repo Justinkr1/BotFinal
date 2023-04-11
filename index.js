@@ -108,36 +108,6 @@ function createRole(message) {
   }
 
 
-// testing create channel
-
-if (command === 'create-channel') {
-    const channelName = message.content.split(" ").slice(1).join(" ");
-    const guild = message.guild;
-
-    if (!channelName) {
-      return message.channel.send("Please provide the course number and channel # (ex. CSC_325_G1).");
-    }
-    guild.channels
-    .create(channelName, { type: 'GUILD_TEXT' })
-    .then(channel => message.channel.send(Created ,{channelName} ,channel))
-    .catch(console.error);
-
-}
-
-if (command === 'createtextchannel') {
-    const channelName = message.content.split(" ").slice(1).join(" ");
-    guild.channels
-    .create({name: channelName, 
-        type: 0,
-        //parent: cat[0].ID,
-    })
-    .then((channel) => {
-        console.log(channel)
-        const categoryId ='1062143661325955123'
-        channel.setParent(categoryId)
-    })
-    message = " "
-}
 
     }));
 //testing poll

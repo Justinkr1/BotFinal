@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-    .setName('reactrole')
+    .setName('enroll')
     .setDescription('This is the reaction role command')
     .addRoleOption(option => option.setName('class1').setDescription('This is the first class you want to set up').setRequired(true))
     .addRoleOption(option => option.setName('class2').setDescription('This is the first class you want to set up').setRequired(true))
