@@ -58,39 +58,9 @@ module.exports = {
       }}
       interaction.followUp('Semester Ended!');
 
-    //interaction.followUp('Semester Ended!');
   } else {
     interaction.followUp('Action cancelled.');
   }
 //finish
-/*
-      const Name = interaction.options.data[0].value;
-      console.log(Name);
-
-      const student = interaction.guild.roles.cache.find(role => role.name === Name + ' Student');
-      const veteran = interaction.guild.roles.cache.find(role => role.name === Name + ' Veteran');
-
-      console.log('veteran ' + veteran)
-      console.log('student ' + student)
-      console.log(student)
-
-      const list = await interaction.guild.members.fetch();
-      console.log('list made');
-			var rolesChanged = 0;
-      console.log('roles changed ' + rolesChanged);
-			 for( i = 0; i < list.size; i++){ //loop through all students who have the student role
-        console.log('inside for loop');
-				var member = list.at(i); 
-        if (member.roles.cache.some(role => role.name === Name + ' Student')) {
-          console.log('inside if statement');
-					member.roles.add(veteran); //add veteran role
-					member.roles.remove(student);//remove student role
-					rolesChanged = rolesChanged + 1;
-          console.log(rolesChanged);
-				}
-      else {
-        console.log('Did not have student role');
-      }}
-		 await interaction.reply('Semester Ended!');*/
 	},
 };
