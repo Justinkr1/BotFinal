@@ -4,63 +4,35 @@ module.exports = {
     name: Events.GuildRoleCreate,
     once: false,
     async execute(role) {
-        const roleArray = [];
-        const positionArray = [];
-        const finalArray = [];
-        let i = 0;
-        if (role.name.toLowerCase().includes('student') || role.name.toLowerCase().includes('veteran')) {
+        if (role.name.toLowerCase().includes('veteran')) {
+            const roles = role.guild.roles.cache.filter(role.name.toLowerCase().includes('veteran'));
+            const roleArray = roles.map(r => {
+                const roleNumArr = r.name.split(' ');
+                return {
+                    number: roleNumArr[1],
+                    id: r.id,
+                    position: r.position,
+                    sub: r.name.toLowerCase().includes('student') ? 'Student' : 'Veteran'
+                };
+            });
 
-        const roles = role.guild.roles.cache.entries();
+            const priority = {
+                Student: 1,
+                Veteran: 2,
+            };
 
-        for (const id of roles) {
+            roleArray.sort((a, b) => priority[a.sub] - priority[b.sub] || b.number - a.number);
 
-            if (id[1].name.toLowerCase().includes('student')) {
+            const finalArray = roleArray.map((r, i) => ({ role: r.id, position: roles.size - i }));
 
-            const roleNumArr = id[1].name.split(' ');
-            
-            roleArray[i] = { number: roleNumArr[1], id: id[1].id, position: id[1].position, sub: 'Student' };
-
-            positionArray[i] = id[1].position;
-            
-            i++;
-            }
-
-            else if (id[1].name.toLowerCase().includes('veteran')) {
-
-            const roleNumArr = id[1].name.split(' ');
-
-            roleArray[i] = { number: roleNumArr[1], id: id[1].id, position: id[1].position, sub: 'Veteran' };
-
-            positionArray[i] = id[1].position;
-            i++;
+            try {
+                await role.guild.roles.setPositions(finalArray);
+            } catch (error) {
+                console.error(error);
             }
         }
-
-        const priority = {
-            Student: 1,
-            Veteran: 2,
-        };
-
-        roleArray.sort((z, y) => {
-            return priority[z.sub] - priority[y.sub] ||
-                y.number - z.number;
-        });
-
-
-        positionArray.sort((z, y) => {
-            return y - z;
-        });
-
-        for (let x = 0; x < roleArray.length; x++) {
-            finalArray[x] = { role: roleArray[x].id, position: positionArray[x] };
+        else {
+            return;
         }
-
-        try {
-         await role.guild.roles.setPositions(finalArray);
-        }
-        catch (error) {
-            console.error(error);
-        }
-   }
-   },
- };
+    },
+};
