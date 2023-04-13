@@ -59,7 +59,7 @@ module.exports = {
             }
             else {
                 const temp = await interaction.guild.channels.create({
-                    name: interaction.options.data[0].value + ' + ' + second,
+                    name: interaction.options.data[0].value + '/' + second,
                     type: ChannelType.GuildCategory,
                 });
                 await interaction.guild.channels.create({
@@ -206,7 +206,7 @@ module.exports = {
             }
             else {
                 const temp = await interaction.guild.channels.create({
-                    name: interaction.options.data[0].value + ' + ' + second,
+                    name: interaction.options.data[0].value + '/' + second,
                     type: ChannelType.GuildCategory,
                 });
                 await interaction.guild.channels.create({
