@@ -64,14 +64,14 @@ module.exports = {
 		const member = interaction.member;
         if (i.customId === 'button1') {
             console.log('inside button1');
-            if (member.roles.cache.some(role => role.name === class1)) {
+            if (i.member.roles.cache.some(role => role.name === class1)) {
                 console.log('student has role');
-                member.roles.remove(role1);
+                i.member.roles.remove(role1);
                await i.reply({content: `You have removed the role :${class1}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role1);
+                i.member.roles.add(role1);
                 await i.reply({content: `You now have the role :${class1}`, ephemeral:true});
             }
         }
@@ -79,14 +79,14 @@ module.exports = {
 
 
         if (i.customId === 'button2') {
-            if (member.roles.cache.some(role => role.name === class2)) {
+            if (i.member.roles.cache.some(role => role.name === class2)) {
                 console.log('student has role');
-                member.roles.remove(role2);
+                i.member.roles.remove(role2);
                 await i.reply({content: `You have removed the role :${class2}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role2);
+                i.member.roles.add(role2);
                 await i.reply({content: `You now have the role :${class2}`, ephemeral:true});
             }
         }
@@ -94,14 +94,14 @@ module.exports = {
 
 
         if (i.customId === 'button3') {
-            if (member.roles.cache.some(role => role.name === class3)) {
+            if (i.member.roles.cache.some(role => role.name === class3)) {
                 console.log('student has role');
-                member.roles.remove(role3);
+                i.member.roles.remove(role3);
                 await i.reply({content: `You have removed the role :${class3}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role3);
+                i.member.roles.add(role3);
                 await i.reply({content: `You now have the role :${class3}`, ephemeral:true});
             }
         }
@@ -160,14 +160,14 @@ module.exports = {
 		const member = interaction.member;
         if (i.customId === 'button1') {
             console.log('inside button1');
-            if (member.roles.cache.some(role => role.name === class1)) {
+            if (i.member.roles.cache.some(role => role.name === class1)) {
                 console.log('student has role');
-                member.roles.remove(role1);
+                i.member.roles.remove(role1);
                 await i.reply({content: `You have removed the role :${class1}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role1);
+                i.member.roles.add(role1);
                 await i.reply({content: `You now have the role :${class1}`, ephemeral:true});
             }
         }
@@ -175,14 +175,14 @@ module.exports = {
 
 
         if (i.customId === 'button2') {
-            if (member.roles.cache.some(role => role.name === class2)) {
+            if (i.member.roles.cache.some(role => role.name === class2)) {
                 console.log('student has role');
-                member.roles.remove(role2);
+                i.member.roles.remove(role2);
                 await i.reply({content: `You have removed the role :${class2}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role2);
+                i.member.roles.add(role2);
                 await i.reply({content: `You now have the role :${class2}`, ephemeral:true});
             }
         }
@@ -190,14 +190,14 @@ module.exports = {
 
 
         if (i.customId === 'button3') {
-            if (member.roles.cache.some(role => role.name === class3)) {
+            if (i.member.roles.cache.some(role => role.name === class3)) {
                 console.log('student has role');
-                member.roles.remove(role3);
+                i.member.roles.remove(role3);
                 await i.reply({content: `You have removed the role :${class3}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role3);
+                i.member.roles.add(role3);
                 await i.reply({content: `You now have the role :${class3}`, ephemeral:true});
             }
         }
@@ -206,14 +206,14 @@ module.exports = {
 
 
         if (i.customId === 'button4') {
-            if (member.roles.cache.some(role => role.name === class4)) {
+            if (i.member.roles.cache.some(role => role.name === class4)) {
                 console.log('student has role');
-                member.roles.remove(role4);
+                i.member.roles.remove(role4);
                 await i.reply({content: `You have removed the role :${class4}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role4);
+                i.member.roles.add(role4);
                 await i.reply({content: `You now have the role :${class4}`, ephemeral:true});
             }
         }
@@ -277,66 +277,66 @@ module.exports = {
 		const member = interaction.member;
         if (i.customId === 'button1') {
             console.log('inside button1');
-            if (member.roles.cache.some(role => role.name === class1)) {
+            if (i.member.roles.cache.some(role => role.name === class1)) {
                 console.log('student has role');
-                member.roles.remove(role1);
+                i.member.roles.remove(role1);
                 await i.reply({content: `You have removed the role :${class1}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role1);
+                i.member.roles.add(role1);
                 await i.reply({content: `You now have the role :${class1}`, ephemeral:true});
             }
         }
 
         if (i.customId === 'button2') {
-            if (member.roles.cache.some(role => role.name === class2)) {
+            if (i.member.roles.cache.some(role => role.name === class2)) {
                 console.log('student has role');
-                member.roles.remove(role2);
+                i.member.roles.remove(role2);
                 await i.reply({content: `You have removed the role :${class2}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role2);
+                i.member.roles.add(role2);
                 await i.reply({content: `You now have the role :${class2}`, ephemeral:true});
             }
         }
 
         if (i.customId === 'button3') {
-            if (member.roles.cache.some(role => role.name === class3)) {
+            if (i.member.roles.cache.some(role => role.name === class3)) {
                 console.log('student has role');
-                member.roles.remove(role3);
+                i.member.roles.remove(role3);
                 await i.reply({content: `You have removed the role :${class3}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role3);
+                i.member.roles.add(role3);
                 await i.reply({content: `You now have the role :${class3}`, ephemeral:true});
             }
         }
 
         if (i.customId === 'button4') {
-            if (member.roles.cache.some(role => role.name === class4)) {
+            if (i.member.roles.cache.some(role => role.name === class4)) {
                 console.log('student has role');
-                member.roles.remove(role4);
+                i.member.roles.remove(role4);
                 i.reply({content: `You have removed the role :${class4}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role4);
+                i.member.roles.add(role4);
                 i.reply({content: `You now have the role :${class4}`, ephemeral:true});
             }
         }
 
         if (i.customId === 'button5') {
-            if (member.roles.cache.some(role => role.name === class5)) {
+            if (i.member.roles.cache.some(role => role.name === class5)) {
                 console.log('student has role');
-                member.roles.remove(role5);
+                i.member.roles.remove(role5);
                 i.reply({content: `You have removed the role :${class5}`, ephemeral:true});
             }
             else {
                 console.log('student does not have role');
-                member.roles.add(role5);
+                i.member.roles.add(role5);
                 i.reply({content: `You now have the role :${class5}`, ephemeral:true});
             }
         }
